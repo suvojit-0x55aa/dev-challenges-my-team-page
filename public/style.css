@@ -1,0 +1,114 @@
+:root {
+    --image_cont-margin-top-bttom: 10vh;
+    --image_cont-margin-top-bttom-mobile: 8vh;
+    --image_cont-margin-left-right: 2vw;
+    --white: #ffffff;
+}
+
+body {
+    width: 80vw;
+    margin: 0 auto;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+}
+
+header {
+    display: flex;
+    margin: 2vw 2vw 0 2vw;
+}
+
+h2 {
+    text-transform: uppercase;
+    /* margin-bottom: 0; */
+    font-weight: 600;
+}
+
+#title {
+    margin-top: 1vw;
+    font-family: PT Serif;
+    font-style: normal;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: -0.045em;
+    width: 50%;
+}
+
+#subtitle {
+    margin-top: 1vw;
+    width: 50%;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+#about-us {
+    font-size: 1em;
+}
+
+#image-slide {
+    margin-top: var(--image_cont-margin-top-bttom);
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+}
+
+.image-container {
+    /* width: 21vw; */
+    margin-bottom: var(--image_cont-margin-top-bttom);
+    flex-basis: 25%;
+    display: flex;
+    flex-grow: 1;
+    margin: 0 var(--image_cont-margin-left-right) 0 var(--image_cont-margin-left-right);
+}
+
+.image-container:nth-child(3n+2) {
+    margin-top: var(--image_cont-margin-top-bttom);
+}
+
+.image-and_name {
+    display: 80%;
+}
+
+.headshot {
+    display: block;
+    width: 100%;
+    padding-right: 0%;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.designation-container {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    padding-left: 3%;
+}
+
+@media screen and (orientation: portrait) {
+    .image-container {
+        /* width: 21vw; */
+        flex-basis: 30%;
+    }
+    .image-container:nth-child(3n+2) {
+        margin-top: 0;
+    }
+    .image-container:nth-child(odd) {
+        margin-bottom: var(--image_cont-margin-top-bttom-mobile);
+    }
+    .image-container:nth-child(even) {
+        margin-top: var(--image_cont-margin-top-bttom-mobile);
+    }
+    header {
+        flex-direction: column;
+    }
+    #title {
+        width: 100%;
+    }
+    #subtitle {
+        width: 100%;
+    }
+}
